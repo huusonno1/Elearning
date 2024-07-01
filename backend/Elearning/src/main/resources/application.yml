@@ -1,0 +1,26 @@
+server:
+  port: 9000
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/elearning
+    username: root
+    password: 123456
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      format_sql: true
+
+api:
+  prefix: /api/v1
+
+application:
+  security:
+    jwt:
+      secret-key: 8ruLAXj6b915k3Y59ZTgJ2BMuV/xZ/ZxhvbWRpJArQOeUK7Obka3ZntMXkLalHuu
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
