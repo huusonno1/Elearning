@@ -12,10 +12,13 @@ import com.codewithson.Elearning.response.course.CourseListResponse;
 import com.codewithson.Elearning.response.course.CourseResponse;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -63,11 +66,23 @@ public class CourseService implements ICourseService{
     }
 
     @Override
-    public Course getCourseById(Long id) throws Exception {
+    public CourseResponse getCourseById(Long id) throws Exception {
         Optional<Course> optionalCourse = courseRepo.getDetailCourse(id);
-        if(optionalCourse.isPresent()){
-            return optionalCourse.get();
-        } throw new DataNotFoundException("Cannot find Course with id = " + id);
+        if(!optionalCourse.isPresent()){
+            throw new DataNotFoundException("Cannot find Course with id = " + id);
+        }
+
+        Course newCourse = optionalCourse.get();
+        CourseResponse courseResponse = CourseResponse.builder()
+                .nameCourse(newCourse.getNameCourse())
+                .description(newCourse.getDescription())
+                .price(newCourse.getPrice())
+                .categoryId(newCourse.getCategory().getId())
+                .thumbnail(newCourse.getThumbnail())
+                .adminId(newCourse.getAdmin().getId())
+                .build();
+
+        return courseResponse;
     }
 
     @Override
@@ -122,6 +137,32 @@ public class CourseService implements ICourseService{
 
     @Override
     public CourseListResponse getCourses(Long categoryId, PageRequest pageRequest) {
-        return null;
+        try {
+            Page<Course> coursesPage = courseRepo.getAllCourses(categoryId, pageRequest);
+            if (coursesPage == null) {
+                throw new RuntimeException("Failed to fetch courses: coursesPage is null");
+            }
+            List<CourseResponse> courseResponses = coursesPage.getContent().stream()
+                    .map(course -> {
+                        CourseResponse courseResponse = new CourseResponse();
+                        courseResponse.setNameCourse(course.getNameCourse());
+                        courseResponse.setDescription(course.getDescription());
+                        courseResponse.setPrice(course.getPrice());
+                        courseResponse.setThumbnail(course.getThumbnail());
+                        courseResponse.setAdminId(course.getAdmin().getId());
+                        courseResponse.setCategoryId(course.getCategory().getId());
+
+                        return courseResponse;
+                    })
+                    .collect(Collectors.toList());
+
+            return CourseListResponse.builder()
+                    .courses(courseResponses)
+                    .totalPages(coursesPage.getTotalPages())
+                    .build();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to fetch courses", e);
+        }
+
     }
 }

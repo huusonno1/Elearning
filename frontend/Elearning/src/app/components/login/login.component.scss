@@ -1,0 +1,42 @@
+@import '../../styles/shared-styles.scss';
+// Styles for login form
+.container {
+  margin-top: 4rem; // or use $spacing variable if defined
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: $primary-color;
+}
+
+.form-group {
+  margin-bottom: 1.5rem; // adjust as needed
+}
+
+.form-label {
+  color: $secondary-color;
+}
+
+.form-control {
+  border-color: $border-color;
+}
+
+.login-button {
+  margin-top: 1.5rem;
+  
+  button {
+    background-color: $primary-color;
+    color: white;
+    border-color: $primary-color;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+    }
+  }
+}

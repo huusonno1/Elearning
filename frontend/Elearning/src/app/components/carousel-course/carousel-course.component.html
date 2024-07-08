@@ -1,0 +1,39 @@
+<div class="container">
+    <div id="carousel" class="carousel slide">
+        <div #carouselInner class="carousel-inner d-flex">
+            <div class="carousel-item" *ngFor="let course of courses; let i = index" [ngClass]="{'active': i === 0}">
+            <div class="card">
+                <div class="card-image">
+                    <img src="real.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.title }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+                    <p class="card-teacher">{{ course.teacher }}</p>
+                    <div class="card-details">
+                        <span class="card-rating">
+                            <ng-container *ngFor="let star of getStarIcons(course.rating)">
+                                <i class="far fa-star" [ngClass]="star.class"></i>
+                            </ng-container>
+                        </span>
+
+                        <span class="card-price">{{ course.price}}</span>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">Add to card</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <button class="carousel-control prev" type="button" (click)="prev()" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control next" type="button" (click)="next()" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+  
+  

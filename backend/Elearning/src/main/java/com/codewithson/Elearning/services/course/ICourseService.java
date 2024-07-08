@@ -11,7 +11,7 @@ public interface ICourseService {
 
     void deleteCourse(Long id);
 
-    Course getCourseById(Long id) throws Exception;;
+    CourseResponse getCourseById(Long id) throws Exception;;
 
     CourseResponse updateCourse(CourseDTO courseDTO, Long id) throws Exception;
 

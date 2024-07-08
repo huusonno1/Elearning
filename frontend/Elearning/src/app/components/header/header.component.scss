@@ -1,0 +1,62 @@
+@import '../../styles/shared-styles.scss';
+
+.header {
+  background-color: $primary-color;
+  padding: 1rem;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: $text-light-color;
+    &:hover {
+      color: lighten($text-light-color, 10%);
+    }
+  }
+
+  .nav-link {
+    color: $text-light-color;
+    padding: 0.5rem 1rem;
+    &:hover {
+      color: lighten($text-light-color, 10%);
+    }
+
+    &.active {
+      color: $text-light-color;
+      font-weight: bold;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $secondary-color;
+    .dropdown-item {
+      color: $text-light-color;
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  .form-control {
+    background-color: $background-color;
+    border: none;
+    color: $text-dark-color;
+    &::placeholder {
+      color: lighten($text-dark-color, 20%);
+    }
+  }
+
+  .btn {
+    color: $text-light-color;
+    border-color: $border-color;
+    background-color: $secondary-color;
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+  
+
+  .text-end {
+    .btn {
+      margin-left: 0.5rem;
+    }
+  }
+}

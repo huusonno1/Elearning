@@ -69,7 +69,7 @@ public class CourseController {
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ResponseObject> updateCourse(
-            @PathVariable Long courseId,
+            @PathVariable Long id,
             @Valid @RequestBody CourseDTO courseDTO,
             BindingResult result
     ) throws Exception{
@@ -81,7 +81,7 @@ public class CourseController {
             courseDTO.setAdminId(loginUser.getId());
         }
 
-        CourseResponse courseResponse = courseService.updateCourse(courseDTO, courseId);
+        CourseResponse courseResponse = courseService.updateCourse(courseDTO, id);
         return ResponseEntity.ok(ResponseObject.builder()
                         .status(HttpStatus.OK)
                         .data(courseResponse)
@@ -94,7 +94,7 @@ public class CourseController {
     public ResponseEntity<ResponseObject> getCourseById(
             @PathVariable Long id
     ) throws Exception {
-        Course courseResponse = courseService.getCourseById(id);
+        CourseResponse courseResponse = courseService.getCourseById(id);
 
         return ResponseEntity.ok(ResponseObject.builder()
                 .status(HttpStatus.OK)
