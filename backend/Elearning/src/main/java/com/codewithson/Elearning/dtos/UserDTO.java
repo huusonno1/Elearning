@@ -32,7 +32,7 @@ public class UserDTO {
     private Date dateOfBirth;
 
     @JsonProperty("image_of_user")
-    private String imageOfUser;
+    private String imageOfUser = "";
 
     @NotNull(message = "Role ID is required")
     @JsonProperty("role_id")
