@@ -1,14 +1,6 @@
 server:
   port: 9000
 
-#aws:
-#  accessKeyId: ${AWS_ACCESS_KEY_ID}
-#  secretKey: ${AWS_SECRET_KEY}
-#  region: ap-southeast-1
-#  s3:
-#    bucketName: elearningvideotest1
-#  cloudfront:
-#    domainName: d2q4ydxgftzaf6.cloudfront.net
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -40,3 +32,12 @@ application:
         expiration: 604800000 # 7 days
 
 
+# khi day len git nho comment cho nay
+#aws:
+#  accessKeyId: ${AWS_ACCESS_KEY_ID}
+#  secretKey: ${AWS_SECRET_KEY}
+#  region: ap-southeast-1
+#  s3:
+#    bucketName: elearningvideotest1
+#  cloudfront:
+#    domainName: d2q4ydxgftzaf6.cloudfront.net

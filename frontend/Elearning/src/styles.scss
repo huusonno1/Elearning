@@ -1,4 +1,8 @@
 @import './app/styles/shared-styles.scss';
+html,
 body {
     background-color: $background-color;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }

@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+    <div class="row">
+        <header class="search-header col-12">
+            <h1>2,684 results for “angular”</h1>
+        </header>
+    </div>
+    <div class="row">
+        <div class="course-directory col-12">
+            <div class="course-filter row">
+                <div class="filter-panel-heading col-12">
+                    <p>This is  filter panel heading </p>
+                </div>
+                <div class="filter-panel-course-list col-12 d-flex">
+                    <div class="filter-panel--sidebar col-md-3 col-sm-12">
+                        <app-fp-sidebar></app-fp-sidebar>
+                    </div>
+                    <div class="filter-panel--paginated-course-list col-md-9 col-sm-12">
+                        <app-fp-course-list></app-fp-course-list>
+                    </div>
+                </div>
+            </div>
+
+            <!-- should create a component pagination -->
+            <nav class="course-pagination row mt-4">
+                <app-course-pagination></app-course-pagination>
+            </nav>
+        </div>
+    </div>
+</div>
+  
+<app-footer></app-footer>
