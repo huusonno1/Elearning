@@ -1,0 +1,85 @@
+.heading {
+    border-bottom: 1px solid #dee2e6;
+  
+    .container {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    
+        .form-filter {
+            .filter-button {
+                display: flex;
+                align-items: center;
+                background-color: #f8f9fa;
+                border: 1px solid #ced4da;
+                padding: 0.5rem 1rem;
+                border-radius: 0.25rem;
+                color: #2d2f31;
+                font-weight: bold;
+                cursor: pointer;
+        
+                a {
+                    margin-right: 0.5rem;
+                    color: #2d2f31;
+                }
+        
+                i {
+                    font-size: 1.2rem;
+                }
+        
+                span {
+                    font-size: 1rem;
+                }
+
+            }
+        }
+    
+        .form-group {
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+    
+            label {
+                margin-right: 1rem;
+                
+                .label-text {
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+    
+            .select-container {
+                position: relative;
+                display: inline-block;
+        
+                select {
+                    appearance: none;
+                    width: 200px;
+                    padding: 0.5rem;
+                    border: 1px solid #ced4da;
+                    border-radius: 0.25rem;
+                    background-color: #fff;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: border-color 0.3s;
+        
+                }
+        
+                .select-icon {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+        
+                    &:after {
+                    content: '▼';
+                    font-size: 0.8rem;
+                    color: #6c757d;
+                    }
+                }
+            }
+        }
+    }
+}
+  

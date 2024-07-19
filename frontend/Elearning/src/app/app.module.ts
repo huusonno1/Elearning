@@ -17,6 +17,7 @@ import { CourseSearchComponent } from './components/course-search/course-search.
 import { FpCourseListComponent } from './components/fp-course-list/fp-course-list.component';
 import { FpSidebarComponent } from './components/fp-sidebar/fp-sidebar.component';
 import { CoursePaginationComponent } from './components/course-pagination/course-pagination.component';
+import { FpHeadingComponent } from './components/fp-heading/fp-heading.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CoursePaginationComponent } from './components/course-pagination/course
     CourseSearchComponent,
     FpCourseListComponent,
     FpSidebarComponent,
-    CoursePaginationComponent
+    CoursePaginationComponent,
+    FpHeadingComponent
   ],
   imports: [
     BrowserModule,

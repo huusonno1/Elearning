@@ -1,10 +1,128 @@
 @import '../../styles/shared-styles.scss';
 
-.container {
-    height: 100%;
-}
+// Định nghĩa các biến màu sắc
+$color-odd: darken($background-color, 2%);
+$color-even: darken($background-color, 7%);
+$text-color: #343a40;
 
-h2{
-    color: $primary-color;
-    padding-top: 1rem;
+.container {
+    .row {
+        &-odd {
+            background-color: $color-odd;
+        }
+        &-even {
+            background-color: $color-even;
+        }
+        
+        .content-row {
+            padding: 30px 0;
+
+            .col-md-6 {
+                display: flex;
+                align-items: center;
+            }
+
+            .content-left, .content-right {
+                width: 100%; // if you want to image in center col-md-6
+                padding: 20px;
+            }
+
+            .heading-content {
+                color: $primary-color;
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            .text-content {
+                margin-bottom: 20px;
+                p {
+                    font-size: 1.2em;
+                    color: $text-color;
+                    line-height: 1.5;
+                    font-weight: 400;
+                }
+                h4 {
+                    color: $primary-color;
+                    font-size: 1.5em;
+                }
+            }
+
+            .button-content {
+                background-color: $primary-color;
+                border-radius: 8px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .text-button {
+                    color: $text-light-color;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+
+            .image-content {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .content-all {
+        text-align: center;
+        .heading-content {
+            font-size: 2.5em;
+            color: $text-color;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .text-content {
+            margin-bottom: 30px;
+            p {
+                font-size: 1.5em !important;
+                color: $text-color;
+                line-height: 1.5;
+            }
+        }
+        .ud-text-content {
+            display: flex;
+            justify-content: space-around;
+            .survey-box {
+                text-align: center;
+                .number-box {
+                    font-size: 3em;
+                    font-weight: bold;
+                    color: $primary-color;
+                }
+                .name-box {
+                    font-size: 1.5em;
+                    color: $text-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .heading-text {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .row-odd, .row-even {
+        .content-row {
+            .text-content {
+                .row {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
 }
