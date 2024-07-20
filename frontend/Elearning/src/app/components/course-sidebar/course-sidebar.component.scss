@@ -1,0 +1,174 @@
+@import '../../styles/shared-styles.scss';
+
+.course-sidebar {
+    height: auto;
+    margin-left: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: lighten($background-color, 10%);
+    border-radius: 13px;
+    .container {
+        padding: 1rem;
+        .purchase-section {
+            margin-bottom: 1rem;
+        
+            &.buy-box-main {
+                .current-price {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: $text-dark-color;
+                }
+
+                .buy-box-item {
+                    margin-bottom: 0.5rem;
+        
+                    &.d-flex {
+                        display: flex;
+                        justify-content: center;
+                        .btn-card, .btn-fav {
+                            button {
+                                border: 1px solid #dee2e6;
+                                border-radius: 0.25rem;
+                                padding: 0.5rem 1rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: $text-dark-color;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .btn-card {
+                            width: 90%;
+                            margin-right: 4px;
+                            button {
+                                background-color: lighten($secondary-color, 10%);
+                                width: 100%;
+
+                                &:hover {
+                                    background-color: $secondary-color;
+                                }
+                            }
+                        }
+
+                        .btn-fav {
+                            button {
+                                background-color: $background-color;
+                                width: 100%;
+
+                                &:hover {
+                                    background-color: darken($background-color, 10%);
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+        
+                .btn-buy-now {
+                    width: 100%;
+                    button {
+                        width: 100%;
+                        background-color: $background-color;
+                        padding: 0.5rem 1rem;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 1rem;
+                        margin: 0.25rem 0;
+                        cursor: pointer;
+                        border-radius: 0.25rem;
+            
+                        a {
+                            color: $text-dark-color;
+                            text-decoration: none;
+                        }
+            
+                        &:hover {
+                            background-color: darken($background-color, 10%);
+                        }
+                    }
+                }
+            }
+        
+            &.money-back-guarantee {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                span {
+                    background-color: lighten($background-color, 10%);
+                    color: $text-dark-color;
+                }
+            }
+        
+            &.sumary-course {
+                h2 {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+        
+                ul {
+                    list-style: none;
+                    padding: 0;
+            
+                    li {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 0.5rem;
+            
+                        .icon {
+                            margin-right: 0.5rem;
+                            width: 40px;
+                            display: flex;
+                            justify-content: center;
+                            i {
+                                font-size: 1.25rem;
+                                color: lighten($secondary-color, 10%);
+                            }
+                        }
+            
+                        .content {
+                            p {
+                                margin: 0;
+                                color: $text-dark-color;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.ctas {
+                .coupon-form {
+                    display: flex;
+                    align-items: center;
+            
+                    .input-coupon {
+                        flex: 1;
+                        padding: 0.5rem;
+                        border: 1px solid #ced4da;
+                        border-radius: 0.25rem;
+                        margin-right: 0.5rem;
+                    }
+            
+                    button {
+                        background-color: lighten($secondary-color, 10%);
+                        border: none;
+                        color: white;
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+                        border-radius: 0.25rem;
+            
+                        span {
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
+            
+                        &:hover {
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+}
+  
