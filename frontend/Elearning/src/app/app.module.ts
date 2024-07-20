@@ -18,6 +18,10 @@ import { FpCourseListComponent } from './components/fp-course-list/fp-course-lis
 import { FpSidebarComponent } from './components/fp-sidebar/fp-sidebar.component';
 import { CoursePaginationComponent } from './components/course-pagination/course-pagination.component';
 import { FpHeadingComponent } from './components/fp-heading/fp-heading.component';
+import { CourseDetailBfBuyComponent } from './components/course-detail-bf-buy/course-detail-bf-buy.component';
+import { CourseDetailAfBuyComponent } from './components/course-detail-af-buy/course-detail-af-buy.component';
+import { CourseContentComponent } from './components/course-content/course-content.component';
+import { CourseSidebarComponent } from './components/course-sidebar/course-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { FpHeadingComponent } from './components/fp-heading/fp-heading.component
     FpCourseListComponent,
     FpSidebarComponent,
     CoursePaginationComponent,
-    FpHeadingComponent
+    FpHeadingComponent,
+    CourseDetailBfBuyComponent,
+    CourseDetailAfBuyComponent,
+    CourseContentComponent,
+    CourseSidebarComponent
   ],
   imports: [
     BrowserModule,
