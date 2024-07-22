@@ -7,6 +7,7 @@
   .navbar-brand {
     font-size: 1.5rem;
     color: $text-light-color;
+    font-weight: bold;
     &:hover {
       color: lighten($text-light-color, 10%);
     }
@@ -14,6 +15,8 @@
 
   .nav-link {
     color: $text-light-color;
+    font-size: 1rem;
+    font-weight: 500;
     padding: 0.5rem 1rem;
     &:hover {
       color: lighten($text-light-color, 10%);
@@ -29,6 +32,8 @@
     background-color: $secondary-color;
     .dropdown-item {
       color: $text-light-color;
+      font-size: 1rem;
+      font-weight: 500;
       &:hover {
         background-color: $hover-color;
       }
@@ -39,6 +44,8 @@
     background-color: $background-color;
     border: none;
     color: $text-dark-color;
+    font-size: 1rem;
+    font-weight: 500;
     &::placeholder {
       color: lighten($text-dark-color, 20%);
     }
@@ -46,6 +53,8 @@
 
   .btn {
     color: $text-light-color;
+    font-size: 1rem;
+    font-weight: 500;
     border-color: $border-color;
     background-color: $secondary-color;
     &:hover {

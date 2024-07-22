@@ -22,6 +22,10 @@ import { CourseDetailBfBuyComponent } from './components/course-detail-bf-buy/co
 import { CourseDetailAfBuyComponent } from './components/course-detail-af-buy/course-detail-af-buy.component';
 import { CourseContentComponent } from './components/course-content/course-content.component';
 import { CourseSidebarComponent } from './components/course-sidebar/course-sidebar.component';
+import { ListModuleLessonComponent } from './components/list-module-lesson/list-module-lesson.component';
+import { CourseBoardsComponent } from './components/course-boards/course-boards.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { MyCoursesComponent } from './components/my-courses/my-courses.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { CourseSidebarComponent } from './components/course-sidebar/course-sideb
     CourseDetailBfBuyComponent,
     CourseDetailAfBuyComponent,
     CourseContentComponent,
-    CourseSidebarComponent
+    CourseSidebarComponent,
+    ListModuleLessonComponent,
+    CourseBoardsComponent,
+    CheckoutComponent,
+    MyCoursesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,39 @@
-<p>course-detail-af-buy works!</p>
+<app-header></app-header>
+<div class="course-detail-af-buy">
+    <div class="main-content d-flex justify-content-center">
+        <div class="col-md-10 d-flex">
+            <div class="col-md-9 p-3">
+                <div class="row">
+                    <div class="content-heading">
+                        <div class="container d-flex">
+                            <div class="course-video">
+                                <video width="100%" height="auto" controls loop autoplay muted>
+                                    <source 
+                                        src="video1.mp4"
+                                        type="video/mp4"
+                                    />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-3">
+                    <div class="content-detail">
+                        <div class="container d-flex justify-content-center">
+                            <div class="col-md-10">
+                                <!-- <app-course-content></app-course-content> -->
+                                <!-- this is course-board -->
+                                <app-course-boards></app-course-boards>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3">
+                <!-- this is list module -->
+                <app-list-module-lesson></app-list-module-lesson>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

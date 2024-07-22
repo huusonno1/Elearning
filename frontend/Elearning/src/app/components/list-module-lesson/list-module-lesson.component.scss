@@ -1,0 +1,90 @@
+@import '../../styles/shared-styles.scss';
+// SCSS Styles
+
+.list-module-lesson {
+    background-color:  $background-color;
+  
+    .list-module {
+        border-radius: 13px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: lighten($background-color, 10%);
+        margin-bottom: 3rem;
+        .accordion {
+            margin-bottom: 1rem;
+            .heading-list {
+                h2 {
+                    margin-left: 0.5rem;
+                    color: $text-dark-color;
+                    font-size: 2em;
+                }
+            }
+            .accordion-item {
+                .accordion-header {
+                    .accordion-button {
+                        display: flex;
+                        justify-content: space-between;
+                        background: lighten($secondary-color, 10%);
+                        border: none;
+                        span {
+                            &:first-child {
+                                font-weight: bold;
+                            }
+                            &:last-child {
+                                margin-left: 2rem;
+                                font-size: 0.875rem;
+                                color: $text-dark-color;
+                            }
+                        }
+                    }
+                }
+        
+                .accordion-body {
+                    padding: 1rem 1.5rem;
+                    background-color: $background-color;
+                    .block-list {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+            
+                        li {
+                            display: flex;
+                            align-items: center;
+                            padding: 0.75rem 0;
+                            .icon {
+                                margin-right: 1rem;
+                                font-size: 1.25rem;
+                                color: #6c757d;
+                            }
+                
+                            .list-item-content {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                
+                                .name-lesson {
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                    border: none;
+                                    background-color: $background-color;
+                    
+                                    span {
+                                        font-size: 1rem;
+                                    }
+                                }
+                
+                                .preview {
+                                    color: $secondary-color;
+                                    cursor: pointer;
+                                }
+                
+                                .sumary {
+                                    color: #6c757d;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

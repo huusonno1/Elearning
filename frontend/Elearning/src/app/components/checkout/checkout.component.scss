@@ -1,0 +1,199 @@
+@import '../../styles/shared-styles.scss';
+
+// SCSS Styles
+
+.checkout {
+    padding: 20px;
+    background-color: $background-color;
+    height: 100%;
+  
+    .container {
+        display: flex;
+        justify-content: space-between;
+        
+        .col-md-7, .col-md-5 {
+            margin-bottom: 20px;
+        }
+
+        .col-md-7 {
+            margin-right: 20px;
+        }
+    
+        .main-checkout {
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            h2 {
+                font-size: 1.75rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .form-checkout {
+                .cart-type {
+                    margin-bottom: 20px;
+        
+                    h3 {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        color: #333;
+                        margin-bottom: 10px;
+                    }
+        
+                    .image-cart-type {
+                        .image-items {
+                            margin-right: 10px;
+                            img {
+                                width: 100%;
+                                height: auto;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                padding: 5px;
+                                transition: transform 0.3s;
+                                cursor: pointer;
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .form-group {
+                    margin-bottom: 15px;
+        
+                    .form-label {
+                        font-size: 1rem;
+                        font-weight: normal;
+                        color: #555;
+                    }
+        
+                    .form-control {
+                        border-radius: 5px;
+                        border: 1px solid #ddd;
+                        padding: 10px;
+                        &:focus {
+                            border-color: #6f42c1;
+                            box-shadow: 0 0 5px rgba(111, 66, 193, 0.5);
+                        }
+                    }
+                }
+        
+                .d-flex {
+                    .col-md-6 {
+                        padding: 0 10px;
+                    }
+                }
+        
+                .login-button {
+                    button {
+                        background-color: $secondary-color;
+                        color: #fff;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        transition: background-color 0.3s;
+                        &:hover {
+                            background-color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .sumary-course {
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            h2 {
+                font-size: 1.75rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .list-course-checkout {
+                margin-bottom: 20px;
+                .course-card {
+                    display: flex;
+                    overflow: hidden;
+                    margin-bottom: 0.5rem;
+                    border-radius: 8px;
+            
+                    .col-md-3 {
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        .course-image {
+                            height: 70px;
+                            margin-left: 5px;
+                            img {
+                                border-radius: 8px;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                
+                    .col-md-9 {
+                        padding: 0 1rem;
+            
+                        .course-content {
+                            .course-card-tilte {
+                                h3 {
+                                    margin: 0;
+                                    font-size: 1.2rem;
+                                    font-weight: 700;
+                                    a {
+                                        text-decoration: none;
+                                        color: #000;
+                                    }
+                                }
+                            }
+                            .course-price {
+                                .current-price {
+                                    font-weight: bold;
+                                    font-size: 1rem;
+                                    color: #000;
+                                }
+                                .original-price {
+                                    text-decoration: line-through;
+                                    color: #6c757d;
+                                    font-size: 0.9rem;
+                                }
+                            }
+                            
+                        }
+                    }
+            
+                    &:hover {
+                        cursor: pointer;
+                    }
+            
+                }
+            }
+    
+            .row-item {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                border-bottom: 1px solid #ddd;
+        
+                &:last-child {
+                    border-bottom: none;
+                }
+        
+                span {
+                    font-size: 1rem;
+                    color: #555;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import '../../styles/shared-styles.scss';
+
+/* styles.scss or component-specific SCSS file */
+
+.course-detail-af-buy {
+    .main-content {
+        display: flex;
+        justify-content: center;
+    
+        .col-md-10 {
+            display: flex;
+    
+            .col-md-9 {
+                padding: 1rem;
+        
+                .row {
+                    .content-heading {
+                    .container {
+                        display: flex;
+        
+                        .course-video {
+                            video {
+                                border-radius: 8px;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    }
+                }
+        
+                .content-detail {
+                    .container {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+    
+            .col-md-3 {
+                padding: 1rem;
+                /* Add any additional styles for the list module here */
+            }
+        }
+    }
+  }
+  

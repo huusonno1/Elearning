@@ -1,0 +1,116 @@
+<app-header></app-header>
+<div class="checkout">
+    <div class="container d-flex">
+        <div class="col-md-7 py-3">
+            <div class="main-checkout">
+                <h2>Checkout</h2>
+                <form class="form-checkout">
+                    <div class="cart-type">
+                        <h3>Cart Type</h3>
+                        <div class="image-cart-type d-flex">
+                            <div class="image-items">
+                                <img src="image.png" alt="image-cart-type">
+                            </div>
+                            <div class="image-items">
+                                <img src="image.png" alt="image-cart-type">
+                            </div>
+                            <div class="image-items">
+                                <img src="image.png" alt="image-cart-type">
+                            </div>
+                            <div class="image-items">
+                                <img src="image.png" alt="image-cart-type">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="name-card" class="form-label">Name on Card</label>
+                        <input type="text" id="name-card" name="name-card" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="card-number" class="form-label">card-number</label>
+                        <input type="text" id="card-number" name="card-number" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3 d-flex">
+                        <div class="col-md-6">
+                            <label for="expiration-date" class="form-label">expiration-date</label>
+                            <input type="text" id="expiration-date" name="expiration-date" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CVC" class="form-label">CVC</label>
+                            <input type="text" id="CVC" name="CVC" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="login-button d-grid">
+                        <button type="submit" class="btn btn-block">Confirm Payment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5 py-3">
+            <div class="sumary-course">
+                <h2>Summary</h2>
+                <div class="list-course-checkout">
+                    <div class="course-card d-flex">
+                        <div class="col-md-3">
+                            <div class="course-image">
+                                <img src="real.jpg" alt="error image">
+                            </div>
+                        </div>
+                        <div class="col-md-9">    
+                            <div class="course-content">
+                                <div class="course-card-tilte">
+                                    <h3>
+                                        <a href="/course-detail-bf-buy">
+                                            Angular - The Complete Guide (2024 Edition)
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="course-price">
+                                    <p class="current-price">$24.69</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card d-flex">
+                        <div class="col-md-3">
+                            <div class="course-image">
+                                <img src="real.jpg" alt="error image">
+                            </div>
+                        </div>
+                        <div class="col-md-9">    
+                            <div class="course-content">
+                                <div class="course-card-tilte">
+                                    <h3>
+                                        <a href="/course-detail-bf-buy">
+                                            Angular - The Complete Guide (2024 Edition)
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="course-price">
+                                    <p class="current-price">$24.69</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-item d-flex">
+                    <span class="subtotal">Subtotal</span>
+                    <span class="number-price">$51.38</span>
+                </div>
+                <div class="row-item d-flex">
+                    <span class="coupon">Coupon</span>
+                    <span class="number-price">0 %</span>
+                </div>
+                <div class="row-item d-flex">
+                    <span class="tax">Tax</span>
+                    <span class="number-price">$5</span>
+                </div>
+                <div class="row-item d-flex">
+                    <span class="total">Total</span>
+                    <span class="number-price">$56.38</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

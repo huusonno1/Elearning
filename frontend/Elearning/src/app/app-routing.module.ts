@@ -6,6 +6,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { CourseSearchComponent } from './components/course-search/course-search.component';
 import { CourseDetailBfBuyComponent } from './components/course-detail-bf-buy/course-detail-bf-buy.component';
 import { CourseDetailAfBuyComponent } from './components/course-detail-af-buy/course-detail-af-buy.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { MyCoursesComponent } from './components/my-courses/my-courses.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'course-search', component: CourseSearchComponent },
   { path: 'course-detail-bf-buy', component: CourseDetailBfBuyComponent },
   { path: 'course-detail-af-buy', component: CourseDetailAfBuyComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'my-courses', component: MyCoursesComponent },
 
 ];
 
